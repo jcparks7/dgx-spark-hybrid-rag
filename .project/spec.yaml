@@ -100,7 +100,13 @@ execution:
         gpu:
             requested: 1
         sharedMemoryMB: 1024
-    secrets: []
+    secrets:
+        - variable: HUGGING_FACE_FACE_HUB_TOKEN
+          description: HuggingFace model access
+        - variable: NGC_API_KEY
+          description: NGC container registry access
+        - variable: NVIDIA_API_KEY
+          description: NVIDIA API Catalog access
     mounts:
         - type: project
           target: /project/
